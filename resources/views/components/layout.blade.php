@@ -10,10 +10,10 @@
     @vite('resources/fonts/RobotoMono-Regular.ttf')
 
     {{-- Favicon --}}
-    <link rel="apple-touch-icon" sizes="180x180" href="{{ Vite::asset('resources/favicon/apple-touch-icon.png') }}">
-    <link rel="icon" type="image/png" sizes="32x32" href="{{ Vite::asset('resources/favicon/favicon-big.png') }}">
-    <link rel="icon" type="image/png" sizes="16x16" href="{{ Vite::asset('resources/favicon/favicon.png') }}">
-    <link rel="manifest" href="{{ Vite::asset('resources/favicon/site.webmanifest') }}">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-big.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon.png">
+    <link rel="manifest" href="/site.webmanifest">
 
     <style>
         @font-face {
