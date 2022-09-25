@@ -37,7 +37,6 @@
     </style>
 
     @vite('resources/css/app.css')
-    @vite('resources/js/app.js')
     <title>{{ $title ?? 'techbrain Webdesign' }}</title>
 </head>
 
@@ -46,6 +45,8 @@
     <div class="">
         {{ $slot }}
     </div>
+
+    @vite('resources/js/app.js')
 </body>
 
 </html>
