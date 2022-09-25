@@ -18,7 +18,7 @@ class AddContentEncodingHeader
     public function handle(Request $request, Closure $next)
     {
         return $next($request)->withHeaders([
-            'Content-Encoding' => 'gzip'
+            'content-encoding' => 'gzip'
         ]);
     }
 }
