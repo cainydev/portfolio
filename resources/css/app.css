@@ -1,3 +1,10 @@
+[x-cloak] {
+    display: none !important;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+*:focus-visible {
+    @apply outline-none ring-primary ring-2;
+}
