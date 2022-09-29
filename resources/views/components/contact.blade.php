@@ -1,9 +1,6 @@
 <section class="px-4 py-16 mx-auto max-w-7xl">
     <div class="flex flex-col items-center">
-        <h2 class="text-4xl font-semibold text-center">
-            <x-underline w="1">Interesse</x-underline> geweckt? Schreib uns!
-        </h2>
-        <p class="mt-3 text-lg">Wir freuen uns über deine Nachricht und richten gerne eine Erstberatung ein.</p>
+        {{ $slot }}
     </div>
 
     <form action="#" method="POST" class="grid mt-10 gap-y-4 gap-x-12 md:grid-cols-2">

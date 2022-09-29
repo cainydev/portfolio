@@ -16,6 +16,16 @@ class AddCacheHeaders
      */
     public function handle(Request $request, Closure $next)
     {
+        $cacheable = [
+            'ttf',
+            'svg',
+            'css',
+            'js',
+            'png',
+            'jpg',
+            'jpeg'
+        ];
+
         if ($request->is('*.html')) {
             return $next($request)->withHeaders([
                 "pragma" => "no-cache",

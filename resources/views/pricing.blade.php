@@ -4,4 +4,10 @@
         Für jeden das richtige <x-underline>Angebot</x-underline>
     </x-hero>
 
+    <x-content>
+        <h1 class="mb-32">Achtung! Diese Seite befindet sich momentan in der Entwicklung..</h1>
+    </x-content>
+
+    <x-footer></x-footer>
+
 </x-layout>
