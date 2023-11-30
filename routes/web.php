@@ -29,6 +29,10 @@ Route::get('/blog', function () {
     return view('home');
 })->name('blog');
 
+Route::get('/portfolio', function () {
+    return view('portfolio');
+})->name('portfolio');
+
 Route::get('/impressum', function () {
     return view('imprint');
 })->name('imprint');

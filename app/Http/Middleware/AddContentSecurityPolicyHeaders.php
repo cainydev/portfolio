@@ -17,11 +17,13 @@ class AddContentSecurityPolicyHeaders
      */
     public function handle(Request $request, Closure $next)
     {
-        /*Vite::useCspNonce();
+        Vite::useCspNonce();
 
-        return $next($request)->withHeaders([
-            'Content-Security-Policy' => "default-src 'self'; script-src 'nonce-" . Vite::cspNonce() . "'",
-        ]);*/
+        if (\Illuminate\Support\Facades\App::environment('production')) {
+            return $next($request)->withHeaders([
+                'Content-Security-Policy' => "default-src 'self'; manifest-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'unsafe-inline' 'unsafe-eval' 'nonce-" . Vite::cspNonce() . "'",
+            ]);
+        }
 
         return $next($request);
     }
