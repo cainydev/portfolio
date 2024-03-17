@@ -15,16 +15,16 @@
                        year="2021"
                        :alternate="true">
         <img class="object-cover md:col-span-3 rounded-lg"
-             src="{{ Vite::asset('resources/images/portfolio/hemio_fullscreen.jpg') }}"
+             src="{{ Vite::asset('resources/images/portfolio/hemio_fullscreen.webp') }}"
              alt="">
         <img class="object-cover md:col-span-2 rounded-lg"
-             src="{{ Vite::asset('resources/images/portfolio/hemio_login.jpg') }}"
+             src="{{ Vite::asset('resources/images/portfolio/hemio_login.webp') }}"
              alt="">
         <img class="object-cover md:col-span-2 rounded-lg"
-             src="{{ Vite::asset('resources/images/portfolio/hemio_newadd.jpg') }}"
+             src="{{ Vite::asset('resources/images/portfolio/hemio_newadd.webp') }}"
              alt="">
         <img class="object-cover md:col-span-3 rounded-lg"
-             src="{{ Vite::asset('resources/images/portfolio/hemio_messenger.jpg') }}"
+             src="{{ Vite::asset('resources/images/portfolio/hemio_messenger.webp') }}"
              alt="">
     </x-portfolio-entry>
 
@@ -33,16 +33,16 @@
                        year="2022"
                        :alternate="false">
         <img class="object-cover border-primary border-2 md:col-span-3 rounded-lg"
-             src="{{ Vite::asset('resources/images/portfolio/kis_calc.png') }}"
+             src="{{ Vite::asset('resources/images/portfolio/kis_calc.webp') }}"
              alt="">
         <img class="object-cover border-primary border-2 md:col-span-2 rounded-lg"
-             src="{{ Vite::asset('resources/images/portfolio/kis_list.png') }}"
+             src="{{ Vite::asset('resources/images/portfolio/kis_list.webp') }}"
              alt="">
         <img class="object-cover border-primary border-2 md:col-span-2 rounded-lg"
-             src="{{ Vite::asset('resources/images/portfolio/kis_recipe.png') }}"
+             src="{{ Vite::asset('resources/images/portfolio/kis_recipe.webp') }}"
              alt="">
         <img class="object-cover border-primary border-2 md:col-span-3 rounded-lg"
-             src="{{ Vite::asset('resources/images/portfolio/kis_stats.png') }}"
+             src="{{ Vite::asset('resources/images/portfolio/kis_stats.webp') }}"
              alt="">
     </x-portfolio-entry>
 
