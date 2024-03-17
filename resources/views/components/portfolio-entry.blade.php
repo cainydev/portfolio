@@ -7,7 +7,7 @@
             <span class="before:w-16 before:h-3 before:block flex items-center gap-3 text-xs font-semibold @if($alternate) before:bg-white @else before:bg-primary @endif">{{ $year }}</span>
             <p class="">{{ $subtitle }}</p>
         </div>
-        <div class="grid items-stretch grid-cols-1 md:grid-cols-5 gap-6 mx-auto max-w-7xl">
+        <div class="grid items-stretch grid-cols-1 lg:grid-cols-5 gap-6 mx-auto max-w-7xl">
             {{ $slot }}
         </div>
     </div>
