@@ -47,6 +47,7 @@
     </style>
 
     @vite('resources/css/app.css')
+    @livewireStyles
 
     <title>{{ $title ?? 'techbra.in - Webdesign aus Aachen' }}</title>
     <meta name="description"
@@ -61,6 +62,7 @@
 
 {{ $slot }}
 
+@livewireScriptConfig
 @vite('resources/js/app.js')
 </body>
 

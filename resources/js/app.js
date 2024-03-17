@@ -1,5 +1,7 @@
 import './bootstrap'
 
+import {Livewire} from '../../vendor/livewire/livewire/dist/livewire.esm';
+
 import './alpine/current-magic'
 
 import.meta.glob([
@@ -8,3 +10,5 @@ import.meta.glob([
     '../favicon/**',
     '../images/**',
 ])
+
+Livewire.start()
