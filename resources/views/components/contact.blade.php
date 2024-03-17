@@ -1,7 +1,7 @@
-<section class="px-4 py-16 mx-auto max-w-7xl">
+<x-section :alternate="false" class="py-8 md:py-16">
     <div class="flex flex-col items-center">
         {{ $slot }}
     </div>
 
     <livewire:inquiry-form />
-</section>
+</x-section>

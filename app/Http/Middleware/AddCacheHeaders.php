@@ -3,18 +3,20 @@
 namespace App\Http\Middleware;
 
 use Closure;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
 
 class AddCacheHeaders
 {
     /**
      * Handle an incoming request.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \Closure(\Illuminate\Http\Request): (\Illuminate\Http\Response|\Illuminate\Http\RedirectResponse)  $next
-     * @return \Illuminate\Http\Response|\Illuminate\Http\RedirectResponse
+     * @param Request $request
+     * @param Closure(Request): (Response|RedirectResponse) $next
+     * @return Response|RedirectResponse
      */
-    public function handle(Request $request, Closure $next)
+    public function handle(Request $request, Closure $next): Response|RedirectResponse
     {
         $cacheable = [
             'ttf',
@@ -26,16 +28,14 @@ class AddCacheHeaders
             'jpeg'
         ];
 
+        $response = $next($request);
         if ($request->is('*.html')) {
-            return $next($request)->withHeaders([
-                "pragma" => "no-cache",
-                "Cache-Control" => "no-store,no-cache, must-revalidate, post-check=0, pre-check=0"
-            ]);
+            $response->headers->set("pragma", "no-cache");
+            $response->headers->set("Cache-Control", "no-store,no-cache, must-revalidate, post-check=0, pre-check=0");
         } else {
-            return $next($request)->withHeaders([
-                "pragma" => "private",
-                "Cache-Control" => "private, max-age=31536000, immutable"
-            ]);
+            $response->headers->set("pragma", "private");
+            $response->headers->set("Cache-Control", "private, max-age=31536000, immutable");
         }
+        return $response;
     }
 }

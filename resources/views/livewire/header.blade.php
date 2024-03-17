@@ -3,9 +3,8 @@
         id="header"
         class="w-full">
 
-
     <div class="flex items-center justify-between w-full gap-4 p-4 py-6 mx-auto max-w-7xl">
-        <x-logo class="h-10 md:h-12 shrink fill-inherit"/>
+        <x-logo class="max-h-10 md:max-h-12 fill-inherit"/>
 
         {{-- Desktop Menu --}}
         <ul class="items-center justify-between hidden text-xl uppercase md:flex gap-x-12">

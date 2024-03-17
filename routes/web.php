@@ -1,5 +1,9 @@
 <?php
 
+use App\Livewire\Fullpage\Home;
+use App\Livewire\Fullpage\Imprint;
+use App\Livewire\Fullpage\Portfolio;
+use App\Livewire\Fullpage\Pricing;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,26 +17,22 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+Route::get('/', Home::class)
+    ->name('home');
+
+Route::get('/angebot', Pricing::class)
+    ->name('pricing');
+
+Route::get('/portfolio', Portfolio::class)
+    ->name('portfolio');
+
+Route::get('/impressum', Imprint::class)
+    ->name('imprint');
+
+/*Route::get('/ueber-uns', function () {
     return view('home');
-})->name('home');
+})->name('about');*/
 
-Route::get('/angebot', function () {
-    return view('pricing');
-})->name('pricing');
-
-Route::get('/ueber-uns', function () {
+/*Route::get('/blog', function () {
     return view('home');
-})->name('about');
-
-Route::get('/blog', function () {
-    return view('home');
-})->name('blog');
-
-Route::get('/portfolio', function () {
-    return view('portfolio');
-})->name('portfolio');
-
-Route::get('/impressum', function () {
-    return view('imprint');
-})->name('imprint');
+})->name('blog');*/

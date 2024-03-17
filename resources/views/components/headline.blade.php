@@ -4,6 +4,6 @@
         <x-underline>{{ $slot }}</x-underline>
     </h1>
     @isset($subtitle)
-    <p>{{$subtitle}}</p>
+    <h2>{{$subtitle}}</h2>
     @endisset
 </x-section>

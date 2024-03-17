@@ -14,7 +14,7 @@
             constrain: 150,
             rotate:  '',
             init() {
-                $dispatch('mousemove');
+                this.mouse = JSON.parse(localStorage.getItem('mouse')) || {x: 0, y: 0};
                 this.updateImage();
             },
             updateImage() {
@@ -23,18 +23,23 @@
                 this.img.y = rect.top - window.scrollY + $refs.image.clientHeight/2;
             },
             updateMouse(e) {
-                this.mouse.x = e.clientX;
-                this.mouse.y = e.clientY;
+                this.mouse.x = this.lerp(this.mouse.x, e.clientX, 0.1);
+                this.mouse.y = this.lerp(this.mouse.y, e.clientY, 0.1);
+                localStorage.setItem('mouse', JSON.stringify(this.mouse))
+            },
+            lerp(start, end, t) {
+                return start * (1 - t) + end * t;
             }
         }"
          x-effect="rotate = 'transform: perspective(400px) rotateX(' + (-(mouse.y-img.y)/constrain) + 'deg) rotateY(' + ((mouse.x-img.x)/constrain) + 'deg)'"
          x-on:mousemove.window="updateMouse"
+         x-on:mouseenter.window="updateMouse"
          x-on:scroll.window="updateImage"
          x-on:resize.window="updateImage">
         <x-dynamic-component :component="$img"
                              x-ref="image"
                              x-bind:style="rotate"
-                             class="max-w-md"/>
+                             class="max-w-md h-min border-2 border-gray-200 shadow-lg rounded-3xl overflow-hidden bg-white"/>
 
     </div>
 </x-section>

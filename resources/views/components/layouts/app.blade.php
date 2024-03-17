@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 
 <head>
     <meta charset="UTF-8">
@@ -45,21 +45,23 @@
             font-display: swap;
         }
     </style>
-    @livewireStyles
+
     @vite('resources/css/app.css')
-    <title>{{ $title ?? 'techbrain Webdesign' }}</title>
+
+    <title>{{ $title ?? 'techbra.in - Webdesign aus Aachen' }}</title>
     <meta name="description"
           content="{{ $description ?? 'Professionelles Webdesign für stabile und langfristig erfolgreiche Seiten. Finden Sie jetzt das richtige Angebot.' }}">
 </head>
 
 <body class="min-h-screen font-mono antialiased text-gray-900 bg-white scroll-smooth fill-gray-900">
-    <x-header></x-header>
-    <div class="">
-        {{ $slot }}
-    </div>
 
-    @livewireScripts
-    @vite('resources/js/app.js')
+@persist('header')
+<x-header/>
+@endpersist
+
+{{ $slot }}
+
+@vite('resources/js/app.js')
 </body>
 
 </html>

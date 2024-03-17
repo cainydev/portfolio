@@ -1,14 +1,10 @@
-import './bootstrap';
+import './bootstrap'
 
-import Alpine from 'alpinejs'
+import './alpine/current-magic'
 
 import.meta.glob([
     '../fonts/**',
     '../patterns/**',
     '../favicon/**',
     '../images/**',
-]);
-
-window.Alpine = Alpine
-
-Alpine.start()
+])
