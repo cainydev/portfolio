@@ -29,6 +29,11 @@ Route::get('/portfolio', Portfolio::class)
 Route::get('/impressum', Imprint::class)
     ->name('imprint');
 
+Route::get('/sitemap', function() {
+    $sitemap = file_get_contents(resource_path('sitemap.xml'));
+    return response($sitemap, 200, ['Content-Type' => 'application/xml']);
+});
+
 /*Route::get('/ueber-uns', function () {
     return view('home');
 })->name('about');*/

@@ -35,6 +35,6 @@ class GenerateSitemap extends Command
                 $this->output->writeln("Found " . config('app.url') . $url->path());
                 return $url;
             })
-            ->writeToFile(public_path('sitemap.xml'));
+            ->writeToFile(resource_path('sitemap.xml'));
     }
 }

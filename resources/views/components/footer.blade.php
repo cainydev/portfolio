@@ -1,5 +1,5 @@
 <x-section :alternate="true">
-    <footer class="grid gap-8 px-4 py-20 mx-auto max-w-7xl">
+    <footer class="relative grid gap-8 px-4 py-20 mx-auto max-w-7xl">
         <span class="flex flex-col gap-4">
             <x-logo class="h-10 md:h-12 fill-white"/>
             <p class="mt-2"><span class="text-xl">&copy;</span> techbra.in - {{ date("Y") }} - Alle Rechte
