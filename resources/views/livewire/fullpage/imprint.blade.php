@@ -14,8 +14,8 @@
         <section>
             <h3>Kontakt:</h3>
             <p>
-                Telefon: <a href="tel:015253397079">(+49) 152 / 5339 7079</a><br>
-                E-Mail: <a href='mailto:info@techbra.in'>info@techbra.in</a><br>
+                Telefon: <a href="tel:+4915253397079">+49 152 53397079</a><br>
+                Email: <a href='mailto:info@techbra.in'>info@techbra.in</a><br>
                 Web: <a href="https://techbra.in">https://techbra.in</a>
             </p>
         </section>

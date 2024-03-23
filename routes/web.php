@@ -3,7 +3,7 @@
 use App\Livewire\Fullpage\Home;
 use App\Livewire\Fullpage\Imprint;
 use App\Livewire\Fullpage\Portfolio;
-use App\Livewire\Fullpage\Pricing;
+use App\Livewire\Fullpage\Services;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,8 +20,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', Home::class)
     ->name('home');
 
-Route::get('/angebot', Pricing::class)
-    ->name('pricing');
+Route::get('/leistungen', Services::class)
+    ->name('services');
 
 Route::get('/portfolio', Portfolio::class)
     ->name('portfolio');
@@ -29,10 +29,10 @@ Route::get('/portfolio', Portfolio::class)
 Route::get('/impressum', Imprint::class)
     ->name('imprint');
 
-Route::get('/sitemap', function() {
+/*Route::get('/sitemap', function() {
     $sitemap = file_get_contents(resource_path('sitemap.xml'));
     return response($sitemap, 200, ['Content-Type' => 'application/xml']);
-});
+});*/
 
 /*Route::get('/ueber-uns', function () {
     return view('home');
