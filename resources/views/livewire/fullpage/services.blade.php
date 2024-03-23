@@ -3,7 +3,7 @@
 
     <x-hero subtitle="Realisieren Sie Ihr Projekt mit innovativer Technologie und individuellem Ansatz."
             cta_text="Zum Kontakt"
-            href="{{ route('home') }}#kontakt"
+            href="#kontakt"
             img="illustrations.services">
         Unsere
         <x-underline>Leistungen</x-underline>
