@@ -2,7 +2,7 @@
     {{-- In work, do what you enjoy. --}}
 
     <x-hero
-        subtitle="Unsere Software ist von Menschen, für Menschen - saubere und intuitive Seiten für mehr Conversions"
+        subtitle="Unsere Software ist von Menschen, für Menschen - saubere und intuitive Seiten für mehr Conversions. Hier finden Sie einige unserer Kundenprojekte."
         cta_text="Zum Angebot"
         href="#kontakt"
         img="illustrations.web_devices">

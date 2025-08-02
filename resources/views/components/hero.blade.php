@@ -1,7 +1,7 @@
 @props(['subtitle', 'cta_text', 'href', 'img'])
 
 <x-section class="grid grid-cols-1 pt-4 pb-24 text-gray-900 md:pt-16 gap-x-16 gap-y-8 md:grid-cols-2">
-    <div class="flex flex-col justify-start min-w-min ">
+    <div class="flex flex-col justify-start min-w-min">
         <h2 class="pt-6 pb-4 text-5xl font-medium leading-tight">{{ $slot }}</h2>
         <p class="pb-4">{{ $subtitle }}</p>
         <x-button-primary href="{{ $href }}">{{ $cta_text }}</x-button-primary>

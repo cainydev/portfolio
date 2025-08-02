@@ -18,9 +18,9 @@ class Inquiry extends Model
     public function sendMail(): void
     {
         // Send mail to me
-        Mail::to('info@techbra.in')->send(new ContactFormSubmissionNotification($this));
+        Mail::to('info@techbra.in')->queue(new ContactFormSubmissionNotification($this));
 
         // Send confirmation to customer
-        Mail::to($this->email)->send(new ContactFormSenderNotification($this));
+        Mail::to($this->email)->queue(new ContactFormSenderNotification($this));
     }
 }
