@@ -539,9 +539,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-bg-opacity: 1;
   background-color: rgb(243 244 246 / var(--tw-bg-opacity));
 }
-.bg-\[url\(\'\/images\/wave1\.svg\'\)\] {
-  background-image: url('/images/wave1.svg');
-}
 .stroke-red-600 {
   stroke: #dc2626;
 }
