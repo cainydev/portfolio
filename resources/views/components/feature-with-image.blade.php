@@ -1,9 +1,9 @@
 @props(['description', 'leftTitle', 'leftText', 'rightTitle', 'rightText', 'illustration'])
 
 <x-section>
-    <div class="lg:py-20 py-8 mx-auto max-w-7xl">
-        <div class="grid items-center grid-cols-1 gap-6 lg:grid-cols-2 lg:gap-24">
-            <div class="order-first block w-full mt-12 lg:mt-0">
+    <div class="lg:py-36 py-24 mx-auto max-w-7xl">
+        <div class="grid items-center grid-cols-1 gap-16 lg:grid-cols-2 lg:gap-24">
+            <div class="order-first block w-full lg:mt-0">
                 <div class="overflow-hidden border-4 border-white shadow-lg bg-white rounded-3xl">
                     <x-dynamic-component class="text-primary fill-primary stroke-primary"
                                          :component="$illustration"/>
