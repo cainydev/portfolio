@@ -33,7 +33,7 @@
     </div>
     <ul
         x-bind:class="{'max-h-0': !open, 'py-0': !open, 'opacity-40': !open, 'max-h-full': open, 'py-8': open, 'opacity-100': open}"
-        class="z-50 px-4 space-y-10 overflow-hidden text-white list-none transition-all bg-white bg-red-500 rounded md:hidden border-primary inset-4"
+        class="z-50 px-4 space-y-10 overflow-hidden text-white list-none transition-all bg-white bg-red-500 rounded-sm md:hidden border-primary inset-4"
         x-cloak>
         <x-nav-link-mobile route="home">Home</x-nav-link-mobile>
         <x-nav-link-mobile route="pricing">Angebot</x-nav-link-mobile>

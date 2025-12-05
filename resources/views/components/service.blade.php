@@ -13,7 +13,7 @@
 
         {{-- Cards --}}
         <div class="grid grid-cols-1 mt-8 gap-y-6 gap-x-7 group grid-flow-dense md:grid-cols-3">
-            <x-service-card class="duration-300 md:col-span-2 hover:shadow-sm hover:scale-[103%]"
+            <x-service-card class="duration-300 md:col-span-2 hover:shadow-xs hover:scale-[103%]"
                             price="1"
                             title="Simple"
                             img="illustrations.about_me">
@@ -23,7 +23,7 @@
                     <x-li>Hochzeiten / Eventseiten</x-li>
                 </ul>
             </x-service-card>
-            <x-service-card class="md:col-span-2 hover:scale-[103%] hover:shadow-sm duration-300"
+            <x-service-card class="md:col-span-2 hover:scale-[103%] hover:shadow-xs duration-300"
                             price="2"
                             title="Advanced"
                             img="illustrations.heatmap">
@@ -34,7 +34,7 @@
                 </ul>
             </x-service-card>
             <x-service-card
-                class="md:row-span-2 md:flex-col md:justify-center hover:shadow-sm hover:scale-[103%] duration-300"
+                class="md:row-span-2 md:flex-col md:justify-center hover:shadow-xs hover:scale-[103%] duration-300"
                 price="3"
                 title="Extra: Onlineshop"
                 img="illustrations.shopping">

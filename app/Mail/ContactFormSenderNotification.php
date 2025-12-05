@@ -15,8 +15,6 @@ class ContactFormSenderNotification extends Mailable
 
     /**
      * Create a new message instance.
-     *
-     * @return void
      */
     public function __construct(public Inquiry $inquiry)
     {
@@ -24,10 +22,8 @@ class ContactFormSenderNotification extends Mailable
 
     /**
      * Get the message envelope.
-     *
-     * @return \Illuminate\Mail\Mailables\Envelope
      */
-    public function envelope()
+    public function envelope(): Envelope
     {
         return new Envelope(
             subject: 'Vielen Dank für Ihre Nachricht',
@@ -36,10 +32,8 @@ class ContactFormSenderNotification extends Mailable
 
     /**
      * Get the message content definition.
-     *
-     * @return \Illuminate\Mail\Mailables\Content
      */
-    public function content()
+    public function content(): Content
     {
         return new Content(
             view: 'emails.contact-form-sender-notification',

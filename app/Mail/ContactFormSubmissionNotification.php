@@ -12,11 +12,8 @@ class ContactFormSubmissionNotification extends Mailable
 {
     use Queueable, SerializesModels;
 
-
     /**
      * Create a new message instance.
-     *
-     * @return void
      */
     public function __construct(public Inquiry $inquiry)
     {
@@ -24,8 +21,6 @@ class ContactFormSubmissionNotification extends Mailable
 
     /**
      * Get the message content definition.
-     *
-     * @return Content
      */
     public function content(): Content
     {
